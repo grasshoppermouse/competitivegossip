@@ -1,0 +1,475 @@
+---
+title: "The impact of resource value, resource contestedness, and coalitions on gossiping"
+author: "Nicole H. Hess and Edward H. Hagen"
+date: "1/28/2021"
+output: 
+  bookdown::html_document2:
+    number_sections: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F, message = F, warning = F)
+source('analysis.R')
+library(knitr)
+library(kableExtra)
+library(gt)
+```
+
+# Abstract
+
+Gossiping might have evolved to strengthen social bonds. However, those with better reputations often obtain more resources than those with poorer reputations. It is therefore also plausible that reputational competition via gossip might be an evolved strategy that functions to secure valuable and scarce material and social resources. Influenced by socioecological models of nonhuman primate competition, and using experimental, survey, and social network analysis methods, we develop and test the hypotheses that gossip (1) targets aspects of reputation relevant to the domain in which the competition is occurring, (2) intensifies when the contested resources are more valuable, and (3) increases when resources are more scarce. We then develop and test hypotheses derived from ‘informational warfare’ theory, which proposes that coalitions strategically collect, analyze, and disseminate gossip. Specifically, we test whether (4) alliances deter negative gossip and (5) whether they increase expectations of reputational harm to competitors. 
+
+In an Mturk population and a sample of sorority women, we found that gossip content is specific to the context of the competition; that gossip, particularly negative gossip, intensifies when the contested resources are more valuable and scarce; and that allies deter negative gossip and increase expectations of reputational harm to an adversary, perhaps because allies improve ability to collect, analyze, and disseminate information about competitors. These results suggest that social bonding and social cohesion theories cannot account for some important aspects of gossiping behavior.
+
+# Introduction
+
+Increased competition for resources among group members is a substantial cost of group living (Alexander, 1974). In many species, including numerous primates, within-group competition for resources involves physical aggression or dominance.  Dominance rank is often based on an individual’s reputation for fighting ability, although it can also be inherited (e.g., Holekamp and Smale, 1991). Humans, too, physically contest material and social resources within groups (e.g., Wilson and Daly, 1985). They also obtain contested group resources via their reputations; in other words, they increase and defend access to group resources, including food, mates, and care, by increasing and defending their reputations relative to competitors. As in other species, human reputations can involve fighting ability (Alexander, 1987; Chagnon, 1988; Hess, Helfrecht, Hagen, Sell, and Hewlett 2010), but human reputations are often based on demonstrated abilities for providing benefits to group members (Alexander, 1987; Gurven, Allen-Arave, Hill, and Hurtado, 2000; Leimar and Hammerstein, 2001; Nowak and Sigmund, 1998; Sugiyama and Chacon, 2000; Hess and Hagen, 2019); success in undertaking risky behaviors, i.e.,  ‘showing off’ or ‘costly-signaling’ (Gintis, Smith, and Bowles, 2001; Hawkes, 1991; Smith & Bliege Bird, 2000); and engaging in reciprocal altruism (Cox, Sluckin, and Steele, 1999; Enquist and Leimar, 1993; Pollock and Dugatkin, 1992). The social transfer of information about these actions and abilities can substantially impact reputations. ‘Gossip’ is a construct that encapsulates behaviors related to the transfer of information about peoples’ actions and abilities. We suggest, as have many others, that gossip is not a trivial pastime but rather a strategic means of manipulating reputations to the benefit of oneself, one’s kin, and one’s allies (e.g., Buss and Dedden, 1990; Paine, 1967). (For the purposes of this paper, we operationalize gossip as true information about peoples’ deeds and qualities.) For discussions on the construct of gossip in evolutionary perspective, see, e.g., Barkow, 1992; Bloom 2004; Hess 2017; Hess and Hagen, 2006a, b; 2019; Wilson, Wilczynski, Wells, and Wiesner, 2000; Giardini and Wittek, 2019).
+
+Corroborating this strategic, competitive view of gossip, it has become clear in recent decades that nonphysical forms of aggression, such as gossiping and ostracism, are common in both sexes and all age groups. These types of aggression have been given different names, including indirect aggression, relational aggression, and social aggression. Evolutionary approaches to non-physical aggression posit that it functions to increase access to resources and mates by harming competitors’ reputations or by excluding competitors from the group (e.g., Campbell, 1999; Archer, 2009; Hess 2006; see also Hawley, 1999; Hawley, Little, and Card, 2008). Gossip about negative deeds and qualities will decrease a target’s reputation, thus decreasing a target’s access to group resources—with the effect of increasing one’s own access to those resources. An alternative evolutionary approach to gossip views it as enhancing group cohesion by transmitting and enforcing social norms (e.g., Gluckman, 1967) or strengthening social bonds (Dunbar, 1998). The two approaches are not mutually exclusive.
+
+## Coalitional aggression
+
+Evolution-minded theorists of human behavior have argued that coalitions and alliances can substantially enhance coalition members’ abilities to defend and acquire valuable resources like mates, food, and territory (Chagnon, 1988; Keeley, 1996; Kurzban, 2001; Tiger, 1969; Tooby and Cosmides, 1988; Wrangham and Peterson, 1996). In humans, coalitional psychology has been linked to an evolutionary history of warfare, an overwhelmingly male activity (Bowles, 2009; Chagnon, 1988; Choi and Bowles, 2007; Lehmann and Feldman, 2008). Studies have indeed shown a male bias in coalitional psychology (e.g., Johnson, et al., 2006; Kurzban, 2001; Van Vugt, De Cremer, and Janssen, 2007).
+
+Among many nonhuman animals, however, both males and females form within-group coalitions and alliances to improve defense and acquisition of valuable, scarce resources (Harcourt and de Waal, 1992). The socioecological model, developed in part to explain variation in female primate relationships, proposes that alliances and coalitions occur when resources are valuable and monopolizable. Under these circumstances, it pays to physically contest resources, with coalitions increasing physical formidability (e.g., Barrett and Henzi, 2002; Boinski, Sughrue, Selvaggi, Quatrone, Henry, and Cropp, 2002; Isbell and Young, 2002; Kappeler and van Schaik, 2002; Koenig, 2002; Silk, 2002a; Sterck, Watts, and van Schaik, 1997; Wrangham, 1980; cf. Janson, 2000). (The socioecological model addresses many additional factors, such as protection from infanticide.) Subsequent models of male within-group coalitions emphasize the defense and acquisition of mates (van Schaik, Pandit, and Vogel, 2006).
+
+Unlike coalitional relationships among nonhuman primates of both sexes, and among human males, coalitional relationships among women and girls are generally not viewed as having evolved to enhance aggression against competitors. Instead, these accounts posit evolutionary benefits for female relationships, and they presume that, unlike men’s relationships, women’s relationships do not function for aggressive acquisition and defense of contested resources.  Smuts (1992), for example, emphasizes the role of female relationships in defending against male aggression. As another example, Taylor, et al.’s (2000) ‘tend and befriend’ depiction of relationships among women spotlights the mutual nurturing, care-giving, and emotional support that are apparent in female relationships. Rodseth, Wrangham, Harrigan and Smuts (1991, p. 232) conclude that women’s relationships “seem to be characterized by high degrees of noninterference mutualism, i.e., cooperation that does not impose a cost on any ‘third party.” These accounts suggest that, unlike nonhuman primates of both sexes and human males, women and girls do not regularly form alliances or coalitions to physically contest resources.
+
+## Informational warfare theory
+
+We have argued that, among humans, coalitions enhance not just physical formidability, but also informational competencies in reputational contests (Hess, 1999, 2006, 2017; Hess and Hagen, 2003, 2019). Collecting, analyzing, and disseminating information about the flaws and misdeeds of others can be difficult because opportunities to observe flaws and misdeeds may be infrequent; because people tend to conceal negative information about themselves, their allies and their kin; because the significance of certain pieces of information might not be immediately clear without additional contextual information and analysis; or because delivering information could require key social network links to a particular recipient. Members of one’s coalition supply more eyes and ears for collecting information about the flaws and misdeeds of competitors, more cognitive power for synthesizing, contextualizing, and analyzing this information, and more routes for disseminating it (see Hess, 2006, for a detailed discussion). If coalitions indeed improve the collection, analysis, and dissemination of reputation-relevant information, then the evolved psychology of reputational competition should be sensitive to the quality of one’s own coalition: those with close, strong, high quality coalitions are more formidable in reputational contests than those with low quality coalitions. 
+
+# Present studies
+
+Almost all research on indirect aggression has involved either direct observation (of, e.g., children’s playground behavior), or reports by teachers, peers, or study participants (Archer and Coyne 2005). Much of the research on indirect aggression has focused on children and adolescents, though more recent research has looked at it in adults (e.g., Vaillancourt & Farrell 2021). Here, we use vignettes and experimental psychological methods in two adult populations to test predictions from the evolutionary strategic view of competitive gossip. In both studies, rather than reporting on the gossip of others or recalling when they gossiped, the participants themselves gossip about a fictional character.  
+
+According to the socioecological model, the higher value and more limited a resource is, the more competition there should be for that resource. According to informational warfare theory, allies should deter negative gossip and increase one’s ability to harm competitors with gossip. If gossip is used strategically to increase access to contested resources, participants should (Study 1) (1) transmit gossip that is specific to the domain of the competition (e.g., competition over food might inspire negative gossip about previous food sharing but not necessarily negative gossip about fertility), transmit more negative gossip and less positive gossip about a competitor when the competed-for resource is (2) highly-valuable and (3) highly-contested, and (4) gossip less negatively about a competitor who has a strategically situated ally or allies. Participants with high quality real-world coalitions vs. those will low quality coalitions should (Study 2) should anticipate greater reputational harm to a fictional adversary.
+
+# Study 1: Do competitive domain, resource value, resource contestedness, and allies affect gossip?
+
+```{r}
+tab_sex <- signif(100*table(gossip$Sex)/nrow(gossip), 3)
+```
+
+For Study 1, participants read a scenario about a target individual in either a work or family context. Participants then read several negative and positive gossip statements about the target, and indicated how likely they would be to tell each statement to another person. In other words, participants could “gossip” about the target. We needed to confirm that participants saw the positive and negative gossip statements we created as indeed positive or negative. We also wanted to confirm that participants saw our work- and family-related gossip as, in fact, work- or family-related. Thus, in Phase I of Study 1, we checked the validity of our stimuli; in Phase II of Study 1, we actually test the predictions outlined above. In order to avoid potential confounds with, e.g., mating psychology, participants read scenarios with the name of same-sexed targets. For simplicity, we only quote female versions of the stimuli below.
+
+We recruited 750 participants from Mechanical Turk. Titled “5-minute survey,” participants were paid \$1.00 for completions. We wrote custom software that assigned participants to different experiments, and conditions within experiments, on a rotating basis (so that, e.g., experiment or condition would not be confounded with time of day or day of week). Each participant provided data for only one condition, and all tests were between-subjects. The software randomized the presentation order of stimuli. After viewing the consent form or the stimulus and questions, 18 participants (2.4%) decided not to complete the survey, and 12 (1.6%) abandoned the survey, providing us with demographic information, but no survey data. Hence, 96.0% completed our survey, with the final survey received 5.35 days after initial posting. An unknown number of participants saw the title or brief description of the survey but decided not to accept it. There were `r length(unique(gossip$Condition))` different conditions, with about 66-67 participants per condition. The sample was female-biased, with `r tab_sex['Female']`% female and `r tab_sex['Male']`% male. Ages ranged from 18 – 89, median = 31, M = 33.5, SD = 10.8. Roughly 75% of our participants were US nationals and 25% were not.
+
+## Phase I: Stimuli screening
+
+In Phase I, we aimed to establish the validity of the gossip statements that would be used to test our hypotheses in Phase II.  We created 10 work-related (non-kin) and 10 family-related (kin) gossip statements about the target in the scenario. Each statement had a negative version and a positive version, for a total of 40 statements. To determine the validity of our gossip statements as being negative vs. positive in a work environment vs. a family context, we had 133 participants read one of the two scenarios, and then read 20 of the gossip statements, where participants were randomly assigned to either the negative or positive version of each statement. (see Table \@ref(tab:gossiptable) for categorized examples of gossip statements; see appendix for a complete list of the gossip statements). Participants rated whether each statement reflected negatively or positively on the target on a Likert scale (1 = Reflects very negatively on the competitor, 5 = Neutral, 9 = Reflects very positively on the competitor). Female participants read about a female target named Elizabeth, and males read about a male target named Dave. 
+
+```{r gossiptable}
+
+tab1 <- 
+  tibble(
+    "." = c('**Positive statements**', '**Matched negative versions**'), 
+    "Work environment" = c('10 original; 9 after screening. Example: “Elizabeth is enthusiastic with customers at work”', '10 original; 9 after screening. Example: “Elizabeth is unenthusiastic with customers at work”'),
+    "Family environment" = c('10 original; 7 after screening. Example: “Elizabeth loves her siblings”', '10 original; 7 after screening. Example: “Elizabeth hates her siblings”')
+  )
+
+kable(tab1, caption = 'Categories and female examples of the 40 gossip statements to be rated in Phase I. Each gossip statement had a matched positive and negative version.') %>% kable_styling()
+```
+
+To confirm that work-specific gossip statements in their positive and negative forms indeed reflected more positively or negatively on workers than family members, and that family-specific gossip statements in their positive and negative forms indeed reflected more positively or negatively on family members than workers, half the sample (67) rated statements after reading the work scenario, and the other half (66) rated statements after reading the family scenario. The female versions of the scenarios were:
+
+>(Office scenario) “Imagine you work in an office with about 10 co-workers, half men and half women. Your office is one division of a company that has done well in the last year. Elizabeth is one of your coworkers. Your desk is next to Elizabeth's, so you know more about her than most other people in the company know.”
+
+>(Family scenario) “Imagine you have an elderly aunt and 10 cousins. One of your cousins is named Elizabeth. Although you are not close with her, Elizabeth lives in your neighborhood, so you know more about her than most other family members know.”
+
+For all gossip statements, the mean rating for the positive version was ≥ 5 (M = 7.0, SD = 0.72, range: 5.0 – 8.1), and the mean rating for the negative version was < 5 (M = 3.3. SD = 0.67, range: 1.8 – 4.8), confirming that, on average, positive statements were seen as positive, and negative statements as negative. When examined in the context of the family scenario, however, both positive and negative versions of one statement (“Elizabeth goes out to bars one night a month” vs. “Elizabeth goes out to bars every Friday and Saturday night”) were seen as negative, so we did not use these questions in Phase II. In addition, we required that positive and negative versions of work-specific gossip statements reflected more positively or negatively on workers than family members, and that positive and negative versions of family-specific gossip statements reflected more positively or negatively on family members than workers. Some statements failed this test. One, regarding punctuality, was, in its negative form, slightly worse for family members than workers, although we had predicted the opposite. Another, regarding illegal drug use, was, in its negative form, slightly worse for workers than family-members, although we had predicted the opposite. Consequently, these six statements were omitted from analyses in Phase II of this study (see Appendix; italicized statements were omitted from Study 1, Phase II analyses). 
+
+One additional pair of statements, regarding good taste in art and literature, was, in both positive and negative forms, slightly more important for coworkers than family members, although we had predicted the opposite. However, the family scenario in Phase II involved inheritance of a valuable painting, so instead of either deleting this statement, or including it in our mean gossip scores, we retained it as a separate variable. 
+
+## Phase II Methods and Predictions
+
+New Mturk participants first read a short vignette about Elizabeth (Dave) that described her (him) as a competitor for a valuable resource, which in the office scenario involved competition over a promotion, and in the family scenario involved competition over a valuable painting. To test predictions, we manipulated the vignettes used in Phase I as described below. Participants then read gossip statements about Elizabeth (Dave) in a random sequence, with random assignment to either the negative or positive version of each statement. These statements were described as known to be true. We then asked participants to “gossip” about her (him) by rating their likelihood of transmitting each gossip statement to another person using a nine-point Likert scale (1 = Very unlikely to tell, 5 = Might tell, and 9 = Very likely to tell). The dependent variable was thus a participant’s mean tendency to relay the gossip statements about Elizabeth (Dave) to another person.
+
+We computed the positive and negative gossip scores separately for office-related and family-related gossip, for a total of four scores: *positive office gossip score*, *negative office gossip score*, *positive family gossip score*, and *negative family gossip score*. For all scores, higher values indicated a greater likelihood of transmitting the gossip. We then computed a *total office gossip score* by adding our positive office gossip variable to the negative office gossip variable. We computed a *total family gossip score* similarly.
+
+### Prediction 1 Methods: Competitive gossip is domain-specific
+
+```{r}
+gossip$SELECT <- gossip$Condition == 7 | gossip$Condition == 8
+tab_domain <- table(gossip$Scenario[gossip$SELECT])
+```
+
+If gossip functions to reduce a competitor’s reputation, and thus their access to contestable resources, then the gossip content should target dimensions of reputation most relevant to the particular competitive social context.
+
+To test this hypothesis, `r sum(tab_domain)` participants read a scenario involving competition over a valuable resource. Half (`r tab_domain['office']`) read the office scenario and half (`r tab_domain['family']`) read the family scenario. These versions were meant to reflect a non-kin social group and a kin social group, respectively (female versions only):
+
+>Office scenario: “Imagine you work in an office with about 10 co-workers, half men and half women. Your office is one division of a company that has done well in the last year. The company has authorized your office supervisor to promote one person in the office, and you are a candidate. The promotion comes with a large pay raise. Elizabeth, a co-worker, is also a candidate for promotion. Your desk is next to Elizabeth's, so you know more about her than most other people in the company know.”
+
+>Family scenario: “Imagine you have an elderly aunt who owns a very valuable painting. You have loved this painting since you were a child. Your aunt is moving into a retirement community, and she has said that she intends to give the painting to one of her 10 nieces and nephews. Elizabeth, one of your cousins, thinks she deserves the painting. Although you are not close with her, Elizabeth lives in your neighborhood, so you know more about her than most other family members know.”
+
+We predicted that in the office condition, participants would relay more office-biased gossip than family-biased gossip, and vice versa in the family condition. Because negative gossip is hypothesized to be a competitive strategy, and because both scenarios involved competition over a valuable resource (a promotion and valuable artwork), we also predicted a more substantial shift in negative gossip scores relative to positive gossip scores for statements whose content matched their competitive environment. Finally, because the dispute in the family scenario involved inheritance of a valuable painting, we also explored if, for the gossip statement involving taste in art and literature, there would be a greater tendency to relate negative gossip, and a reduced tendency to relate positive gossip, in the family vs. office scenario (because the family scenario involved the disposition of a valuable painting).
+
+In both vignette conditions participants reported significantly more office-related gossip than family-related gossip because, after Phase I screening, there were simply more office-related statements remaining (two office statements and four family statements had been removed). We addressed this problem by first converting our total gossip scores to z-scores, and then subtracting the total family gossip z-score from the total office gossip z-score to create a *gossip-bias score*. Higher values indicated a bias toward office-related gossip and lower values indicated a bias towards family-related gossip. For summary statistics of variables in this phase, see Table \@ref(tab:summarystats).
+		
+```{r summarystats}
+
+gossip_vars <- c(
+  "Age" = "Age",
+  "WorkPos" = "Positive office gossip score",
+  "WorkNeg" = "Negative office gossip score",
+  "FamilyPos" = "Positive family gossip score",
+  "FamilyNeg" = "Negative family gossip score",
+  "WorkGossip" = "Total work gossip (positive + negative)",
+  "FamilyGossip" = "Total family gossip (positive + negative)",
+  "TastePos" = "Good taste gossip score",
+  "TasteNeg" = "Bad taste gossip score",
+  "BecomeFriends" = "Likelihood of becoming friends",
+  "Dominance" = "Perceived dominance of competitor",
+  "Friendliness" = "Perceived friendliness of competitor",
+  "Aggressiveness" = "Perceived aggressiveness of competitor",
+  "PhysicalAttack" = "Likelihood that competitor would physically attack",
+  "ReptuationAttack" = "Likehood that competitor would attack reputation"
+)
+
+nina_vars <- c(
+  "reputational_harm" = "Likelihood that antagonist's reputation would suffer",
+  "selfclose" = "Participant's closeness to four sorority friends",
+  "friendsclose" = "Closeness among the four sorority friends"
+)
+
+kable(
+  bind_rows(
+    hagenutils::custom.summarize(gossip_original, gossip_vars),
+    hagenutils::custom.summarize(nina[-1], nina_vars)
+  ),
+  caption = "Summary statistics for Study 1 phase II, and Study 2. Values are reported on the original scale (values were converted to z-scores for all analyses)."
+) %>% 
+  pack_rows(
+    index = c(
+      "Study 1, Phase II" = 15,
+      "Study 2" = 3
+    )
+  ) %>% 
+  kable_styling()
+```
+
+### Prediction 1 Results: Competitive gossip is domain-specific
+
+As predicted, gossip-bias scores were family-biased (lower) in the family scenario and office-biased (higher) in the office scenario, `r bias_ttest`. The largest differences among gossip domains occurred with negative family gossip: participants in the family scenario were much more likely to transmit negative family-specific gossip than were participants in the office scenario, whereas the domain specificity of gossip in the other conditions was less pronounced. See Figure \@ref(fig:domainplot).
+
+```{r domainplot, fig.cap="Distributions of four gossip scores by scenario. Higher values indicate greater reported likelihood of transmitting that type of gossip. Dotted lines are the means of each distribution."}
+plot_domains
+```
+
+As predicted, there was a significantly greater difference between negative office and family gossip scores than between positive office and family gossip scores (mean difference = `r signif(diff_ttest$estimate, 2)`, t(`r diff_ttest$parameter`) = `r signif(diff_ttest$statistic,3)`, p = `r signif(diff_ttest$p.value, 1)`). In the exploratory analyses, participants relayed more negative gossip about taste in art and literature in the family scenario than in the office scenario, `r tasteneg_ttest`. However, there was no significant difference in participants’ tendency to relay positive gossip specifically about taste in art and literature in the family, `r tastepos_ttest`.
+
+### Prediction 2 Methods: Greater resource value increases negative gossip
+
+According to the socioecological model and informational warfare theory, higher value resources should increase the use of negative gossip to help defend, or acquire, the resource, and reduce the use of positive gossip. We predicted that participants would transmit more negative gossip and less positive gossip about a competitor when the competed-for resource was highly-valuable. We only used the office scenario. The dependent measure was, again, participants’ likelihood of relaying negative and positive gossip to a coworker. 
+
+```{r}
+cortest <- cor.test(~Friendliness + Aggressiveness, gossip)
+```
+
+We manipulated the value of the resource (the promotion) in the office scenario by describing the attendant salary increase as either “small” or “large.” Participants read (female version):
+
+>Imagine you work in an office with about 10 co-workers, half men and half women. Your office is one division of a company that has done well in the last year. The company has authorized your office supervisor to promote one person in the office, and you are a candidate. The promotion comes with a [small/large] pay raise. Elizabeth, a co-worker, is also a candidate for promotion. Your desk is next to Elizabeth's, so you know more about her than most other people in the company know.
+ 
+Controls: To improve our ability to detect effects, we needed to control for perceptions of the competitor across conditions that might influence participants’ tendencies to transmit positive or negative gossip about them. We therefore included a perceived friendliness rating of the competitor in our models as a control variable. We also controlled for an index of aggressiveness, the perceived tendency of the competitor to interfere with an adversary (friendliness and aggressiveness had only a small, though significant, degree of correlation, r = `r signif(cortest$estimate, 2)`, p = `r signif(cortest$p.value, 1)`, indicating these were largely independent dimensions of the competitor). For testing the protective effect of a friend against gossip, we included a measure of the physical threat posed by the competitor as a control variable in that condition as well. All gossip variables and the three control variables were converted to z-scores prior to inclusion in regression models. Finally, we explored the effects of participant age and sex.
+
+### Prediction 2 Results: Greater resource value increases negative gossip
+
+As predicted, relative to a “small” salary, a “large” salary increased participants’ tendency to relate negative office-related gossip (Table \@ref(tab:regtable), model 1). Contrary to predictions, there was no significant effect of salary on propensity to relate positive office gossip. However, in an exploratory analysis, there was a significant interaction with sex: when the salary was large men were significantly less likely to relate positive gossip statements (Table \@ref(tab:regtable), model 2).
+
+```{r regtable}
+
+tab_reg <- 
+  model_stats %>% 
+  gt(groupname_col = 'Model', caption = "Linear regression models") %>% 
+  fmt_number(c(3:8), n_sigfig = 2) %>%
+  cols_label(
+    term = "Variable",
+    estimate = "Estimate",
+    std.error = "SE",
+    statistic = 'Z-value',
+    p.value = 'P-value',
+    conf.low = 'Lower 95% CI',
+    conf.high = 'Upper 95% CI'
+  ) %>% 
+  tab_footnote(model_summary, cells_row_groups())
+# gtsave(tab_reg, 'regtable.pdf')
+# gtsave(tab_reg, 'regtable.html')
+tab_reg
+
+```
+
+
+### Prediction 3 Methods: Greater resource contestability increases negative gossip and decreases positive gossip
+
+According to the socioecological model and informational warfare theory, more contested resources should increase the use of negative gossip to help defend, or acquire, the resource, and reduce the use of positive gossip. We manipulated the degree of contestedness (in the office scenario only) by stating that, of 10 co-workers, one, three, or five people would receive promotions, with one promotion as the most contested resource, and five promotions as the least contested resource (in all of these conditions, the salary was described as “large”). When the promotion was highly contested, we predicted participants would show a greater tendency to relay negative gossip about the competitor, and lesser tendency to relay positive gossip. Participants were randomly assigned to the office scenario with one, three or five promotions available (between subjects):
+
+>Imagine you work in an office with about 10 co-workers, half men and half women. Your office is one division of a company that has done well in the last year. The company has authorized your office supervisor to promote [one person/three people/five people] in the office, and you are a candidate. The promotion comes with a large pay raise. Elizabeth, a co-worker, is also a candidate for promotion. Your desk is next to Elizabeth's, so you know more about her than most other people in the company know.
+
+We also included the *Friendliness* and *Aggressiveness* controls described above.
+
+### Prediction 3 Results: Greater resource contestability increases negative gossip but does not decrease positive gossip
+
+As predicted, a more contested resource resulted in an increased tendency to relate negative gossip (Table \@ref(tab:regtable), model 3). Contrary to predictions, contestedness had no significant effect on the tendency to relate positive gossip (Table \@ref(tab:regtable), model 4).
+
+### Prediction 4 Methods: Ally location and number deters negative gossip
+
+According to informational warfare theory, allies can help defend or acquire valuable contested resources by increasing reputational harm to adversaries, and by limiting reputational harm to coalition members. Our final prediction for Study 1 was that participants would be deterred from gossiping negatively about a competitor who had an ally in the social environment in which the competition is occurring rather than an ally in a non-relevant social environment. This is because local allies would be better at aiding the competitor in retaliatory gossip against the participant, providing alibis against the participant’s negative gossip, etc. It is the nature of the ally’s ability to retaliate with gossip within the shared community that should have a deterrent effect on offensive, negative gossip by the participant (Hess 2017). We also predicted that more allies would increase the deterrent effect.
+
+```{r}
+gossip$SELECT = gossip$Condition %in% 1:4
+tab_friend_loc = table(gossip$Ally_location[gossip$SELECT])
+```
+
+We again used only the office scenario. We wanted to elicit the strongest possible competitive responses in our participants, so we used only the “high contestability” condition (i.e., one promotion), and only the “valuable” resource condition (i.e., large pay raise). Alliance status of the competitor was manipulated between subjects by describing the competitor as either regularly having lunch with a friend from his or her neighborhood (i.e., no explicit office ally, n = `r tab_friend_loc['neighborhood']`) or regularly having lunch a friend from the office (i.e., an explicit office ally, n = `r tab_friend_loc['office']`). The number of allies was manipulated by having lunch with one or two friends. Participants read the following scenario (female version):
+
+>Imagine you work in an office with about 10 co-workers, half men and half women. Your office is one division of a company that has done well in the last year. The company has authorized your office supervisor to promote one person in the office, and you are a candidate. The promotion comes with a large pay raise. Elizabeth, a co-worker, is also a candidate for promotion. Your desk is next to Elizabeth's, so you know more about her than most other people in the company know. Elizabeth regularly has lunch with her good friend[s] from [the office/her neighborhood], Jennifer [and Melissa] (male version: Mike [and Tom]). 
+
+Having a friend in the office might increase the perceived friendliness of the competitor or, conversely, increase perceived physical threat, compared to having a friend from the neighborhood, and it might be these factors that deter gossip. We therefore included the *Friendliness* and *Aggressiveness* controls described earlier, and also included an additional control for *Physical Threat*. We also tested if these perceptions differed by condition.
+
+### Prediction 4 Results: Ally location protects against negative gossip but ally number does not
+
+As predicted, the presence of an explicit ally of the competitor in the office significantly reduced the tendency to relate negative gossip about the competitor compared to the presence of an ally from the neighborhood (Table \@ref(tab:regtable), model 5). In an exploratory analysis, we found that the presence of an explicit ally in the office had no significant effect on positive gossip about the competitor (Table \@ref(tab:regtable), model 6). Contrary to predictions, the number of allies in the office was not a significant predictor of negative gossip (or positive gossip).
+
+For a competitor with a friend in the office vs. the neighborhood, there was no significant difference in the perceived friendliness, `r friendly_ttest`, aggressiveness, `r aggressive_ttest`, or perceived physical threat, `r physical_ttest`. These were also included as control variables in the regression models. Hence, reduced gossip toward a competitor with an office ally is unlikely to be explained by differences in perceived friendliness, aggressiveness, or physical threat.
+
+# Study 2: Does the quality of real-world cliques increase perceived likelihood of reputational harm to a fictional adversary?
+
+To determine whether one’s real-world coalitional status influences perceived ability to retaliate with gossip, we recruited `r nrow(nina)` members of one college sorority to participate. The data used for Study 2 are a subset of a much larger dataset involving several surveys, social network data, interviews, etc., all collected over four years of ethnographic work on female conflict, cooperation, and coalitions; hence, we do not have male data (see Hess, 2006 for an extended description of subject recruitment, payment for participation, etc.).
+
+## Method and predictions: Higher real-world coalition quality predicts greater expected reputational harm to a fictional adversary
+
+Testing prediction 4 in Study 1 involved manipulating the coalitional status of a fictional competitor, then measuring the impact of the manipulations on participants’ gossip strategies. Informational warfare theory proposes that both those who attack with gossip and those who are attacked by gossip can have coalitions that provide either more offense or more defense in reputational battles. In Study 2, we explored the impact of the participants’ coalitional status on a conflict involving reputation and gossip. In addition, we wanted to explore participants’ real-world coalitional status.
+
+Sorority participants read a scenario and imagined themselves in it. The scenario placed the participant at a party with several members of her sorority, including a fictional member, Nina. The participant talks to Nina’s boyfriend throughout the party. At one point during the party, the participant inadvertently walks into a closed room and sees Nina and another man, a known troublemaker, taking cocaine (a “bad” behavior to most women in this sorority, as confirmed by ethnographic interviews). Nina’s boyfriend walks the participant home after the party. The next day, the participant learns that Nina has been gossiping to other sorority members that the participant was interacting inappropriately with her boyfriend during and after the party. The participant knows, however, that it was Nina who was acting inappropriately by taking illegal drugs.
+
+The dependent variable, ninabadrep, was a composite score of the participant’s agreement with nine statements about the reputational consequences to Nina of the events in the scenario, such as “Nina will get a bad reputation in the Greek community” and “It will get around that Nina is a liar.” Responses could range between 9 (strong disagreement with every statement) and 90 (strong agreement with every statement). High ninabadrep scores indicated a perceived high likelihood that negative information about Nina’s behavior would spread.
+
+We could not manipulate participants’ coalition status, but we could try to assess their existing coalitional status. After consulting with sorority informants about what words they would use to describe the quality and value of a friendship, we operationalized coalition quality as the ‘closeness’ of real-world sorority friends. Participants rated how close they were with each of their four best friends in the sorority house (1 = not at all close to 10 = extremely close), as well as how close each of those friends was with each other (e.g., “How close is your 2nd closest friend with your 4th closest friend?”). The first independent variable, selfclose, was the sum of each participant’s perceived closeness with her best friends, a simple measure of dyadic relationship quality. The second independent variable, friendsclose, was the sum of each participant’s perceived closeness among her best friends, another simple measure of coalition quality.
+
+Women with high quality coalitions should be more willing and able to cooperate effectively than women with low quality coalitions. We therefore predicted that higher selfclose and friendsclose scores would be associated with higher ninabadrep scores.
+
+Previously, Hess (2006) found that one clique member’s perception of closeness to the other members of the clique correlated positively with those other members’ average perceived closeness to her (r = .41). In addition, the member’s perception of closeness among the other members also correlated positively with those members average perceived closeness to one another (r = .57). These results suggest that clique members tend to agree about their closeness to one another, a finding that partially validates our method.
+
+## Results: One dimension of higher real-world coalition quality predicts greater expected reputational harm to a fictional adversary
+
+See Table \@ref(tab:summarystats) for variable summary statistics. We computed a multiple regression of *ninabadrep* as a function of *selfclose* and *friendsclose* (Table \@ref(tab:regtable), model 7). This analysis showed that, as predicted, *friendsclose* was a significant positive predictor of *ninabadrep*. Contrary to predictions, *selfclose* was not a significant predictor of *ninabadrep.* The closer a sorority member perceives her own real-world friends to be to each other (but not necessarily to herself), the more reputational harm she expects to come to a fictional adversary.
+
+# Discussion
+
+If the dissemination of negative gossip is strategic, its content should reflect relevant reputational characteristics of one’s competitors. Study 1 found that gossip about a competing coworker reflected his or her value as a productive office member more than it did his or her value as a family member, and that gossip about a competing family member reflected his or her reputation as a reliable, cooperative family member than it did his or her value as an office worker. This effect was strongest for family gossip and negative gossip.
+
+In addition, if gossip is a competitive strategy, then negative gossip should increase when competition increases. Study 1 found that, in an office context, increased resource value (larger promotion) and resource scarcity (fewer available promotions) increased negative gossip about a competitor. Only men, however, decreased positive gossip about a competitor for a higher valued resource, and resource scarcity did not affect the tendency to relate positive gossip by either sex.
+
+Study 1 found, as predicted, that the presence of an explicit ally of the competitor in the office, compared to the presence of an ally from his or her neighborhood, significantly reduced the tendency to relate negative gossip about the office competitor. This result cannot be explained by the “friendliness” of the competitor because the competitor had a friend in both conditions, and because there was no significant difference in perceived friendliness, aggressiveness, or physical threat across conditions. In addition, this effect persisted after controlling for the perceived friendliness, aggressive, and physical threat of the competitor. We note that having a friend in the office also significantly decreased positive gossip about the competitor, which would not be expected if the effect were due to increased perceived friendliness. Hence, the deterrent effect of a friend against negative gossip is unlikely to be explained by a confound with friendliness. We found no significant sex differences in the effect of the office ally on gossip, suggesting that, for within-group competition, coalitions may be equally important to women and men.
+
+Across conditions in Study 1, the perceived *Friendliness* of the competitor was a positive predictor of the likelihood of relaying gossip, positive or negative. Perceived *Aggressiveness*, on the other hand, was a positive predictor only of negative gossip.
+
+Study 2 showed that among sorority women, more tightly-knit real-world social networks predicted higher expectations of reputational harm to an adversary. This provides support for the hypothesis that coalitions enhance offensive and defensive capabilities in indirect aggression.
+
+# Limitations
+
+Our studies involved self-reported propensities to transmit gossip, as well as self-reported expectations of social harm to an adversary, in response to hypothetical scenarios. Our sample was heavily female-biased, which could have influenced our results. Most tests, however, did not reveal significant sex differences. Ideally our results will need to be validated by future research involving real-world gossip, and using additional research methods. Foster (2004) describes several gossip research methods, such as “eavesdropping,” diaries, surveys, experiments, social network analysis, neurobiological methods, and ethnography, addressing some of the strengths and weaknesses of each.
+
+Though closer real-world social networks predict higher expectations of reputational harm to an adversary, our study does not reveal why closeness has this effect. Similarly, although we have largely ruled out “friendliness” as an explanation for the protective effect of friends against negative gossip, and reduced the possibility that increased physical threat is the explanation, we have not explained why friends have this protective effect. It could be, contrary to our alliance hypothesis, that the competitor’s office friend is perceived as a social resource that could be shared, which might reduce a desire to gossip about the competitor.
+
+# Concluding remarks
+
+We used experimental, survey, and social network methods in two populations of adults to test predictions about reputational competition (gossip) that were inspired by socioecological models of animal competition and cooperation and informational warfare theory. We found that, for both sexes, gossip content is specific to the context of the competition, and that gossip, particularly negative gossip, intensifies when contested resources are more valuable and scarce. Participants were gossiping strategically in ways that benefitted their own individual access to contested resources. We also found that, for both sexes, local allies deter negative gossip. Then, in a population of women only, we found that closer real-world social networks predicted higher expectations of reputational harm to an adversary from one’s community. Social bonding and group cohesion theories cannot completely account for these important aspects of gossiping psychology. This suggests that the psychology of coalitional competition is not limited to physical, between-group aggression among males, but instead also involves the use of gossip for within-group competition in either sex (Hess 2006; Hess and Hagen 2019).
+
+# References
+
+Alexander, R. D. (1974). The evolution of social behavior. Annual Review of Ecology, Evolution, and Systematics, 5, 325-383.
+
+Alexander, R. D. (1987). The biology of moral systems. New York: de Gruyter.
+
+Archer, J. (2009). Does sexual selection explain human sex differences in aggression? Behavioral and Brain Sciences, 32, 249-266.
+
+Archer, J. & Coyne, S. M. (2005). An integrated review of indirect, relational, and social aggression. Personality and Social Psychology Review, 9, 212-230.
+
+Barkow, J. H. (1992). Beneath new culture is old psychology: Gossip and social stratification. In J. H. Barkow, L. Cosmides, & J. Tooby (Eds.), The adapted mind: Evolutionary psychology and the generation of culture (pp. 627-637). New York: Oxford University Press.
+
+Barrett, L. & Henzi, S.P. (2002). Constraints on relationship formation among female primates.  Behaviour, 139, 263-289.
+
+Bernstein, I. S. (1981). Dominance: The baby and the bathwater. Behavioral and Brain Sciences, 4, 419-429.
+
+Bloom, P. (2004). Postscript to the special issue on gossip. Review of General Psychology, 8, 138-140.
+
+Boinski, S., Sughrue, K., Selvaggi, L., Quatrone, R., Henry, M. & Cropp, S. (2002). An expanded test of the ecological model of primate social evolution: Competitive regimes and female bonding in three species of squirrel monkeys (Saimiri oerstedii, S. boliviensis, and S. sciureus). Behaviour, 139, 227-261.
+
+Bowles S., (2009). Did warfare among ancestral hunter-gatherers affect the evolution of human social behaviors? Science, 324, 293-298.
+
+Burbank, V. K. (1994). Cross-cultural perspectives on aggression in women and girls: An introduction. Sex Roles, 30, 169-176.
+
+Buss, D. M., & Dedden, L. (1990). Derogation of competitors. Journal of Social and Personal Relationships, 7, 395-422.
+
+Campbell, A. (1999). Staying alive: Evolution, culture, and women's intra-sexual aggression. Behavioral and Brain Sciences, 22, 203-252.
+
+Chagnon, N. A. (1988). Life Histories, Blood Revenge, and Warfare in a Tribal Population. Science, 239, 985-992.
+
+Chapais, B. (1996). Competing through co-operation in nonhuman primates: Developmental aspects of matrilineal dominance.  International Journal of Behavioral Development, 19, 7-23.
+
+Choi, J. K. and Bowles, S., (2007). The coevolution of parochial altruism and war. Science; 318, 636-40.
+
+Cox, S. J., Sluckin, T. J. & Steele, J. (1999). Group Size, Memory, and Interaction Rate in the Evolution of Cooperation. Current Anthropology, 40, 369-377.
+
+De Scioli, P. and Kurzban, R. (2009). The Alliance Hypothesis for Human Friendship. PLoS ONE, 4, e5802. doi:10.1371/journal.pone.0005802.
+
+Drews, C. (1993). The concept and definition of dominance in animal behaviour. Behaviour, 125, 283-313.
+
+Dunbar, R. I. M. (1998). Grooming, gossip, and the evolution of language. Harvard University Press.
+
+Enquist, M., & Leimar. O. (1993). The evolution of cooperation in mobile organisms. Animal Behaviour, 45, 747-757.
+
+Feldman, J. E., Wilcox, J. Z., George, T., Barsic, D. N., & Scherer, A. (2003). Elemental surface analysis at ambient pressure by electron-induced x-ray Fluorescence. Review of Scientific Instruments, 74, 1251-1254.
+
+Foster, E. K. (2004). Research on gossip: Taxonomy, methods, and future directions. Review of General Psychology, 8 (2), pp. 78-99.
+
+Gintis, H., Smith, E.A. & Bowles S. (2001). Costly signaling and cooperation. Journal of Theoretical Biology, 213, 103-119.
+
+Gluckman, M. (1963). Gossip and Scandal. Current Anthropology, 4, 307–316.
+
+Gurven M, Allen-Arave, W., Hill, K. & Hurtado, M. (2000). “It’s a Wonderful Life”: signaling generosity among the Ache of Paraguay. Evolution and Human Behavior, 21, 263–282.
+
+Harcourt, A. H. & de Waal, F. (1992). Coalitions and alliances in humans and other animals. Oxford: Oxford University Press.
+
+Hawkes, K. (1991). Showing off: tests of an hypothesis about men’s foraging goals. Ethology and Sociobiology,12, 29–54.
+
+Hawley, P.H. (1999). The ontogenesis of social dominance: A strategy-based evolutionary perspective. Developmental Review, 19, 97–132.
+
+Hawley, P. H., Little, T. D., & Card, N. A. (2008). The myth of the alpha male: A new look at dominance-related beliefs and behaviors among adolescent males and females. International Journal of Behavioral Development, 32, 76-88.   
+
+Hess, N. H. (1999) Female coalitions and gossip. Human Behavior and Evolution Society Conference, University of Utah, Salt Lake City.
+
+Hess, N. H. (2006). Informational warfare: The evolution of female coalitional competition (Doctoral dissertation, University of California, Santa Barbara). Dissertation Abstracts International, 67 (01), 242.
+
+Hess, N. H. and Hagen, E. H. (2003) Applying the socioecological model of primate coalition formation to human females. The Primate Report, 66, pp.
+
+Hess, N. H. and Hagen, E. H. (2006a) Sex differences in informational aggression: Psychological evidence from young adults. Evolution and Human Behavior, 27, 231-245.
+
+Hess, N. H. & Hagen, E. H. (2006b). Psychological adaptations for assessing gossip believability. Human Nature, 17, 337-354.
+
+Hess N. H., Helfrecht, C., Hagen, E. H., Sell, A. and Hewlett, B. S. (2010). Interpersonal aggression among Aka hunter-gatherers of the Central African Republic: Assessing the effects of sex, strength, and anger. Human Nature, 21, 330-354.
+
+Hess NH and Hagen EH (2019) Gossip, reputation, and friendship in in-group competition: An evolutionary perspective. In F. Giardini & R. Wittek (Eds.), The Oxford Handbook of Gossip and Reputation. New York, NY: Oxford University Press. (See Appendix N for proof of acceptance)
+
+Hess NH (2017) Informational Warfare: Coalitional Gossiping as a Strategy for Within-Group Aggression. The Oxford Handbook of Female Competition (M. Fisher, ed.). Oxford University Press
+
+Holekamp. K. E. and Smale, L. (1991). Dominance acquisition during mammalian social development: The “inheritance” of maternal rank. American Zoologist, 31 (2), 306-317.
+
+Isbell, L. A. & Young, T. P. (2002). Ecological models of female social relationships in primates: Similarities, disparities, and some directions for future clarity. Behaviour 139: 177-202.
+
+Janson, C. H. (2000). Primate socio-ecology: The end of a golden age. Evolutionary Anthropology. 9, 73-86.
+
+Johnson, D. P., McDermott, R., Barrett, E. S., Cowden, J. Wrangham, R. McIntyre, M. H., & Rosen, S. P (2006).  Overconfidence in wargames: experimental evidence on expectations, aggression, gender and testosterone. Proceedings of the Royal Society of London B, 273, 2513-2520.
+
+Kaplan, H., & Gurven, M. (2005). The natural history of human food sharing and cooperation: A review and a new multi-individual approach to the negotiation of norms. In H. Gintis, S. Bowles, R. Boyd, & E. Fehr (Eds.) Moral sentiments and material interests: The foundations of cooperation in economic life (pp. 75-113). Cambridge, MA: MIT Press
+
+Kappeler, P. M., & Van Schaik, C. P. (2002). Evolution of primate social systems. International Journal of Primatology, 23, 707-740.
+
+Koenig, A. (2002). Competition for resources and its behavioral consequences among female primates. International Journal of Primatology, 23, 759-783.
+
+Kurzban, R. (2001). The social psychophysics of cooperation: nonverbal communication in a public goods game. Journal of Nonverbal Behavior, 25, 241-259.
+
+Lehmann L. and Feldman M. (2008). War and the evolution of belligerence and bravery. Proceedings of the Royal Society of London Series B, 275, 2877-2885
+
+Leimar, O. & Hammerstein. P. (2001). Evolution of cooperation through indirect Reciprocity. Proceedings of the Royal Society of London B, 268, 745–753.
+
+Maynard Smith, J. & Parker, G.R. (1976). The logic of asymmetric contests. Animal Behavior, 24, 159-175.
+
+Nowak M. A. A. &  Sigmund, K. (1998). Evolution of indirect reciprocity by image scoring. Nature, 393, 573-577.
+
+Paine, R. (1967). What is gossip about? An alternative hypothesis. Man, 2, 278-285.
+
+Pollock, G. & Dugatkin, L. A. (1992). Reciprocity and the Emergence of Reputation. Journal of Theoretical Biology, 159, 25-37.
+
+R Development Core Team (2008). R: A language and environment for statistical computing. R Foundation for Statistical Computing, Vienna, Austria. ISBN 3-900051-07-0, URL http://www.R-project.org.
+
+Rodseth, L., Wrangham, R. W. , Harrigan, A. M., & Smuts, B. B. (1991). The human community as a primate society. Current Anthropology, 32, 221-254.
+
+van Schaik C. P. (1983). Why are diurnal primates living in groups? Behaviour, 87, 120-144.
+
+van Schaik, C. P., Pandit, S. A., & Vogel, E. R. (2006) Toward a general model for male-male coalitions in primate groups. In P. M. Kappeler & C. P. van Schaik (Eds.), Cooperation in primates and humans (pp. 151-172). Berlin: Springer.
+
+Schjelderup-Ebbe, T., 1922. Beitrage zur sozialpsychologie des haushuhns. Zeitschrift für Psychologie 88, pp. 225–252.
+
+Silk, J. B. (2002a). Females, food, family, and friendship. Evolutionary Anthropology, 11, 85-87.
+
+Silk, J. B. (2007a). Social Components of Fitness in Primate Groups. Science, 317, 1347-1351.
+
+Silk, J. B. (2007b). The adaptive value of sociality in mammalian groups. Philosophical Transactions of the Royal Society, B, 362, 539-559.
+
+Smith, E. A. & Bliege Bird, R. L. (2000). Turtle Hunting and Tombstone Opening: Public Generosity as Costly Signaling. Evolution and Human Behavior, 21, 245–261.
+
+Smuts, B. (1992). Male aggression against women: An evolutionary perspective. Human Nature, 3, 1–44.
+
+Sterck E.H.M., Watts,  D.P., & Van Schaik, C.P. (1997). The evolution of female social relationships in nonhuman primates. Behavioral Ecology and Sociobiology, 41, 291-309.
+
+Sugiyama, L. S. & Chacon, R. (2000). Effects of illness and injury among the Yora and Shiwiar. In L. Cronk, N. A. Chagnon,  & W. Irons (Eds.) Human behavior and adaptation: An anthropological perspective (pp. 371-396). New York: Aldine de Gruyter.
+
+Taylor, S. E., Cousino Klein, L., Lewis, B. P.,  Gruenewald, T. L., Gurung, R. A. R., & Updegraff J. A. (2000). Biobehavioral responses to stress in females: Tend-and-befriend, not fight-or-flight. Psychological Review, 107, 411-429.
+
+Tiger, L. (1969). Men in groups. New York: Random House.
+
+Tooby, J. & Cosmides, L. (1988). The evolution of war and its cognitive foundations. Technical Report 888-1. Palo Alto, CA: Institute for Evolutionary Studies.
+
+Tooby, J. & Cosmides, L. (1996). Friendship and the banker’s paradox. Proceedings of the Royal British Academy, 88, 119-143.
+
+Van Vugt, M., De Cremer, D., & Janssen, D. P. (2007) Gender differences in cooperation and competition. Psychological Science, 18, 19-23.
+
+Vaillancourt, T., & Farrell, A. H. (2021). Mean kids become mean adults: Trajectories of indirect aggression from age 10 to 22. Aggressive Behavior.
+
+Wilson, D.S., Wilczynski, C., Wells, A., & Weiser, L. (2000). Gossip and other aspects of language as group-level adaptations. In C. Heyes & L. Huber (Eds.) The Evolution of Cognition, (pp. 347-365). Cambridge, Massachusetts: MIT Press.
+
+Wilson, D. S., Timmel, J. J., & Miller, R. R. (2004). Cognitive cooperation: When the going gets tough, think as a group. Human Nature, 15, 1-15.
+
+Wilson, M. and Daly, M. (1985). Competitiveness, risk taking, and violence: The young male syndrome. Ethology and Sociobiology 6: 59-73.
+
+Wrangham, R. W. (1980). An ecological model of female-bonded primate groups. Behaviour, 75, 262-300.
+
+Wrangham, R. W., & Peterson, D. (1996). Demonic males : Apes and the origins of human violence. New York: Houghton Mifflin.
+
+# Appendix
+
+All gossip statements screened in Study 1, Phase I; italicized statements were removed from Phase II analyses (for reasons, see text). Female versions only.
+
+* Elizabeth has a good understanding of the computer system at work.
+* Elizabeth does not have a good understanding of the computer system at work.
+* Elizabeth is willing to work late to finish a project on time.
+* Elizabeth is unwilling to work late to finish a project on time.
+* Elizabeth always contributes to gifts for colleagues at work.
+* Elizabeth never contributes to gifts for colleagues at work. 
+* *Elizabeth is punctual*.
+* *Elizabeth is not punctual*.
+* Elizabeth never misplaces important documents.
+* Elizabeth regularly misplaces important documents.
+* Elizabeth rarely uses the phone at work for personal calls.
+* Elizabeth often uses the phone at work for personal calls.
+* Elizabeth never takes home office supplies from work.
+* Elizabeth frequently takes home office supplies from work.
+* Elizabeth is enthusiastic with customers at work.
+* Elizabeth is not enthusiastic with customers at work.
+* Elizabeth takes short lunch breaks.
+* Elizabeth takes long lunch breaks.
+* Elizabeth works well under pressure.
+* Elizabeth does not work well under pressure.
+* Elizabeth is good with children.
+* Elizabeth is not good with children.
+* Elizabeth has no credit card debt.
+* Elizabeth has high credit card debt.
+* Elizabeth always invites her parents to visit her.
+* Elizabeth never invites her parents to visit her.
+* Elizabeth does not gamble.
+* Elizabeth frequently gambles.
+* *Elizabeth goes out to clubs one night a month*.
+* *Elizabeth goes out to clubs every Friday and Saturday night*.
+* *Elizabeth never uses marijuana or other illegal drugs*.
+* *Elizabeth sometimes smokes marijuana*.
+* Elizabeth has good taste in art, literature, and music.
+* Elizabeth has poor taste in art, literature, and music.
+* Elizabeth loves her siblings.
+* Elizabeth hates her siblings.
+* Elizabeth has the same political views as most of her family members.
+* Elizabeth does not have the same political views as most of her family members.
+* Elizabeth is a safe driver.
+* Elizabeth is an unsafe driver.
+ 
