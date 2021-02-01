@@ -1,6 +1,6 @@
 # competitivegossip
 
-[![DOI](https://zenodo.org/badge/)](https://zenodo.org/badge/latestdoi/)
+[![DOI](https://zenodo.org/badge/334811060.svg)](https://zenodo.org/badge/latestdoi/334811060)
 
 This repository contains all code necessary to reproduce:
 
