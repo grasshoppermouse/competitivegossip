@@ -4,7 +4,7 @@
 
 This repository contains all code necessary to reproduce:
 
-[*The impact of resource value, resource contestedness, and coalitions on gossiping*](https://grasshoppermouse.github.io/competitivegossip/). Nicole H. Hess and Edward H. Hagen
+[*Competitive gossip: The impact of resource value, resource contestedness, and coalitions*](https://grasshoppermouse.github.io/competitivegossip/). Nicole H. Hess and Edward H. Hagen
 
 Instructions:
 

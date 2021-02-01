@@ -1,5 +1,5 @@
 ---
-title: "The impact of resource value, resource contestedness, and coalitions on gossiping"
+title: "Competitive gossip: The impact of resource value, resource contestedness, and coalitions"
 author: "Nicole H. Hess and Edward H. Hagen"
 date: "1/28/2021"
 output: 
